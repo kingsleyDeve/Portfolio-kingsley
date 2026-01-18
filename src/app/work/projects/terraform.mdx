@@ -1,0 +1,51 @@
+---
+title: "Automatisation d'un déploiement à l'aide de Terraform"
+publishedAt: "2024-04-08"
+summary: "Déploiement d'application conteneurisée docker avec pipeline CI/CD"
+images:
+  - "/images/projects/project-01/terraform.jpg"
+team:
+  - name: "Kingsley WILLIAMS"
+    role: "DevOps / admin sys"
+    avatar: "/images/kingsley.jpg"
+    linkedIn: "https://www.linkedin.com/in/kingsley-williams-324240135/"
+link: "https://gitlab.com/kingsley95/alpinehelloworld"
+
+---
+
+## Description
+
+Déploiement d’architecture AWS avec des modules réutilisables via Terraform.
+Ce dépôt contient des modules Terraform pour provisionner des ressources AWS de manière modulaire, maintenable et réutilisable.
+
+## fonctionnalités clés
+
+Dans ce projet, je provisionne une infrastructure AWS avec Terraform, incluant le déploiement d’une machine virtuelle ainsi que l’installation automatisée de Docker et Jenkins.
+J’ai également mis en place un mécanisme d’output permettant d’afficher directement l’adresse IP publique de l’instance, ce qui facilite les tests de l’application sans avoir à se connecter à la console AWS pour la récupérer.
+
+## Technologies Utilisées
+
+- Terraform (IaC)
+
+Création de module Terraform :
+
+- EBS (Création d'un volume ebs pour mon EC2)
+- EC2 (Création de la machine virtuelle)
+- Elastic ip (Création de l'ip publique qui sera attaché à la vm)
+- Sécurity Group (Création du sécurity group)
+- SSH-KEY (Création de la pair de clé SSH)
+
+
+## Challenges et apprentissages
+
+Ce projet m’a permis de concevoir un module Terraform structuré et réutilisable pour automatiser le déploiement d’infrastructures AWS. Il s’inscrit dans une logique d’Infrastructure as Code visant à standardiser et fiabiliser la création des ressources cloud.
+
+Les principaux défis ont porté sur la structuration du module, la gestion des variables et des outputs, la compatibilité des versions Terraform et du provider AWS, ainsi que la compréhension des dépendances entre ressources.
+
+Enfin, l’utilisation de Terraform m’a permis de mieux appréhender la gestion du cycle de vie de l’infrastructure, la notion de state, et les enjeux liés à la reproductibilité, à la maintenabilité et à la réduction des erreurs humaines dans les déploiements cloud.
+
+## Résultats
+
+Le module permet de déployer une infrastructure AWS de manière automatisée, cohérente et reproductible.
+La configuration est facilement réutilisable grâce aux variables et aux outputs définis, ce qui simplifie l’adaptation à différents environnements.
+Le projet aboutit à une infrastructure plus fiable, maintenable et sujette aux erreurs manuelles.

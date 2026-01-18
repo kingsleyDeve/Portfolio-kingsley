@@ -1,0 +1,48 @@
+---
+title: "Automatisation d'une configuration avec ansible"
+publishedAt: "2024-04-08"
+summary: "Installation d'un cluster k3s avec un role ansible"
+images:
+  - "/images/projects/project-01/ansible.png"
+team:
+  - name: "Kingsley WILLIAMS"
+    role: "DevOps / admin sys"
+    avatar: "/images/kingsley.jpg"
+    linkedIn: "https://www.linkedin.com/in/kingsley-williams-324240135/"
+link: "https://github.com/kingsleyDeve/HomeLab"
+
+---
+
+## Description
+
+Installation d'un cluster  k3s à l'aide d'un role ansible.
+
+## fonctionnalités clés
+
+- Roles :
+
+        - control_plane = permet de configurer le nœud master
+        - node = permet d’ajouter des nœuds master supplémentaires
+        - tasks = regroupe les tâches exécutées en amont avant les autres rôles
+        - worker = permet d’ajouter des nœuds worker au cluster
+
+- inventory = contient les informations des machines cibles recevant la configuration automatiquement
+
+- k3s.yml = playbook permettant d’exécuter les rôles sur les bons équipements
+- secret.yml = contient le secret nécessaire à l’ajout des nœuds au cluster, sécurisé via Ansible Vault
+
+## Challenges et apprentissages
+
+Ce projet m’a permis de concevoir un homelab automatisé avec Ansible, afin de standardiser et industrialiser le déploiement des machines et des services.
+
+Les principaux défis ont été la structuration des playbooks et rôles Ansible, la gestion des inventaires, l’automatisation de l’installation des outils (Docker, Kubernetes, monitoring) et la gestion des variables selon les environnements.
+
+Enfin, l’utilisation d’Ansible m’a permis de mieux comprendre les enjeux d’idempotence, de reproductibilité et de maintenance dans une infrastructure automatisée proche des conditions de production.
+
+## Résultats
+
+L’infrastructure du homelab est désormais déployée et configurée automatiquement grâce à Ansible, ce qui réduit fortement les actions manuelles et les risques d’erreur.
+
+Les playbooks permettent de reproduire rapidement un environnement complet à l’identique sur plusieurs machines.
+
+La solution obtenue est maintenable, évolutive et facilement adaptable, avec une base d’automatisation proche des pratiques professionnelles.

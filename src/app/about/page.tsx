@@ -133,7 +133,7 @@ export default function About() {
                 }}
               >
                 <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
+                <Row paddingX="8">Réserver un appel</Row>
                 <IconButton
                   href={about.calendar.link}
                   data-border="rounded"

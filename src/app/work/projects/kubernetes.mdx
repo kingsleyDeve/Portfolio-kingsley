@@ -1,0 +1,42 @@
+---
+title: "Déploiement de Wordpress sur kubernetes"
+publishedAt: "2024-04-08"
+summary: "Déploiement de Wordpress sur un cluster kubernetes à l'aide de manifest"
+images:
+  - "/images/projects/project-01/kubernetes.jpg"
+team:
+  - name: "Kingsley WILLIAMS"
+    role: "DevOps / admin sys"
+    avatar: "/images/kingsley.jpg"
+    linkedIn: "https://www.linkedin.com/in/kingsley-williams-324240135/"
+link: "https://github.com/kingsleyDeve/Kubernetes-Wordpress"
+
+---
+
+## Description
+
+Ce projet déploie une stack WordPress complète avec une base de données MySQL dans un cluster Kubernetes. Il inclut la configuration des services, déploiements, et secrets nécessaires.
+
+## fonctionnalités clés
+
+- **mysql-secret.yml** :	Secret Kubernetes contenant le mot de passe MySQL
+- **mysql-deployment.yml** :	Déploiement du pod MySQL
+- **mysql-service.yml** :	Service interne pour exposer MySQL à WordPress
+- **wordpress-deployment.yml** :	Déploiement du pod WordPress
+- **wordpress-service.yml** :	Service NodePort pour exposer WordPress
+
+## Challenges et apprentissages
+
+Ce projet m’a permis de déployer une application WordPress complète sur Kubernetes en orchestrant plusieurs composants (Deployments, Services, Ingress, Volumes).
+
+Les principaux défis ont été la gestion du stockage persistant pour la base de données, la configuration du réseau et de l’exposition externe, ainsi que l’utilisation des Secrets et ConfigMaps.
+
+Enfin, ce projet m’a permis de mieux comprendre le fonctionnement de Kubernetes, la gestion des applications stateful et les enjeux de fiabilité et de reproductibilité dans un environnement conteneurisé.
+
+## Résultats
+
+Le projet aboutit à un déploiement fonctionnel de WordPress sur Kubernetes, accessible via une URL publique et reposant sur une architecture conteneurisée structurée.
+
+L’application bénéficie d’un stockage persistant pour les données et d’une configuration propre des services et du réseau.
+
+La solution obtenue est reproductible grâce aux manifests Kubernetes versionnés, facilitant le déploiement et la maintenance.

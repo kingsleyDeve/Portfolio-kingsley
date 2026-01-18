@@ -27,11 +27,28 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiPrometheus,
+  SiGrafana,
+  SiKubernetes,
+  SiTerraform,
+  SiAnsible,
+  SiArgo,
+  SiGitlab,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, FaDocker, FaAws, FaLinux } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
+  docker: FaDocker,
+  aws: FaAws,
+  linux: FaLinux,
+  prometheus: SiPrometheus,
+  grafana: SiGrafana,
+  kubernetes: SiKubernetes,
+  terraform: SiTerraform,
+  ansible: SiAnsible,
+  argocd: SiArgo,
+  gitlab: SiGitlab,
   arrowUpRight: HiArrowUpRight,
   arrowRight: HiArrowRight,
   email: HiEnvelope,

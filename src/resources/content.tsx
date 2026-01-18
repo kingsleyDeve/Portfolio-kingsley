@@ -2,18 +2,18 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Kingsley",
+  lastName: "WILLIAMS",
+  name: `Kingsley WILLIAMS`,
+  role: "Administrateur Systèmes Linux / Infra Cloud",
+  avatar: "/images/kingsley.jpg",
+  email: "kingsley.williams.pro@gmail.com",
+  location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Anglais", "Français"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -25,25 +25,13 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/kingsleyDeve",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/kingsley-williams-324240135/",
     essential: true,
   },
   {
@@ -58,9 +46,9 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: `Portfolio - ${person.name} `,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Je suis kingsley WILLIAMS, Administrateur Systèmes Linux / Infra Cloud</>,
   featured: {
     display: true,
     title: (
@@ -68,86 +56,94 @@ const home: Home = {
         <strong className="ml-4">Once UI</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Mes projets
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/gitlab-ci",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    J’accompagne les équipes dans la conception, la mise en production et l’exploitation d’infrastructures fiables et sécurisées.
 </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
+  label: "A propos",
+  title: `A propos – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
-    subItems: false,
+    subItems: true,
   },
   avatar: {
     display: true,
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://calendar.app.google/YebQySsPaCeXo5ms8",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
-      <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+      <>Je conçois, maintiens et sécurise des infrastructures fiables pour garantir une exploitation stable et performante. <br />
+      J’assure la supervision, la résolution d’incidents et l’apport de solutions techniques adaptées. <br /> 
+      J’automatise les déploiements et les tâches répétitives afin d’améliorer la disponibilité et d’accélérer la mise en production.
+       <br /> Mon objectif : simplifier le quotidien des équipes et offrir une expérience utilisateur optimale.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Adipsys",
+        timeframe: "01/2023 - 01/2025",
+        role: "Administrateur Systèmes & Réseaux / DevOps",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Contexte :
+            déploiement de wifi public BtoB portail captif dans une équipe de 3 personnes
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Administration quotidienne de serveurs Linux Debian
+          </>,
+          <>
+            Maintenance d’infrastructures web haute disponibilité pour garantir l’absence de downtime Docker Swarm
+          </>,
+          <>
+            Déploiement et exploitation d’applications dans le cloud OVH, AWS
+          </>,
+          <>
+           Rédaction de documentations techniques
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Agtek solutions informatiques",
+        timeframe: "09/2020 - 09/2022",
+        role: "Administrateur Systèmes & Réseaux",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Contexte :
+            Support informatique pour +100 clients avec une équipe de 7 personnes
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Création et gestion de machines virtuelles VMware ESXi
+          </>,
+           <>
+            Installation de systèmes de sauvegarde NAS Synology
+          </>,
+           <>
+            Mise en place de connexions sécurisées inter-sites VPN IPSec
+          </>,
+           <>
+            Déploiement et configuration d’équipements réseau switchs, points d’accès Wi-Fi, routeurs
           </>,
         ],
         images: [],
@@ -156,77 +152,108 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Formations",
     institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+
+       {
+        name: "Eazytraining",
+        description: <>Bootcamp DevOps <br  /> <br />
+        <strong>Contexte :</strong>  Bootcamp DevOps à distance, en cours du soir, axé sur la mise en pratique.
+        Déploiement et gestiond’applications modernes,
+        automatisation des environnements et mise en ligne de services dans le cloud.
+        Travailsur la fiabilité, l’organisation et l’amélioration continue des systèmes informatiques.
+        </>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Ecole IPSSI",
+        description: <>Master en cybersécurité & cloud <br  /> <br />
+        <strong>Contexte :</strong> Formation en présentiel axée sur le cloud et la cybersécurité, 
+        avec une approche pratique des méthodesAgile. Apprentissage de l’automatisation des systèmes,
+        de la gestion d’infrastructures modernes et de lasécurisation des environnements informatiques,
+        programmation, bases de données.
+        </>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Compétences Techniques",
     skills: [
       {
-        title: "Figma",
+        title: "Cloud & Infrastructure",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <></>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "AWS",
+            icon: "aws",
+            
+          },
+          {
+            name: "Docker",
+            icon: "docker",
+            
+          },
+          {
+            name: "Kubernetes",
+            icon: "kubernetes",
+            
+          },
+           {
+            name: "GitLab",
+            icon: "gitlab",
+            
+          },
+           {
+            name: "Linux",
+            icon: "linux",
+            
           },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+      
       },
       {
-        title: "Next.js",
+        title: "Monitoring",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <></>
+        ),
+        tags: [
+            {
+              name: "Grafana",
+              icon: "grafana",
+            },
+            {
+              name: "Prometheus",
+              icon: "prometheus",
+            },
+        
+        ],
+        // optional: leave the array empty if you don't want to display images
+      
+      },
+      {
+        title: "DevOps & Automation",
+        description: (
+          <></>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+              name: "Terraform",
+              icon: "terraform",
+            },
+            {
+              name: "argoCD",
+              icon: "argocd",
+            },
+            {
+              name: "Ansible",
+              icon: "ansible",
+            },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+      
       },
     ],
   },
@@ -243,9 +270,9 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Projets",
+  title: `Projets – ${person.name}`,
+  description: `DevOps projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

@@ -1,0 +1,60 @@
+---
+title: "Automatisation d'un déploiement à l'aide de pipeline CI/CD GitLab-CI"
+publishedAt: "2024-04-08"
+summary: "Déploiement d'application conteneurisée docker avec pipeline CI/CD"
+images:
+  - "/images/projects/project-01/gitlab.jpg"
+team:
+  - name: "Kingsley WILLIAMS"
+    role: "DevOps / admin sys"
+    avatar: "/images/kingsley.jpg"
+    linkedIn: "https://www.linkedin.com/in/kingsley-williams-324240135/"
+link: "https://gitlab.com/kingsley95/alpinehelloworld"
+
+---
+
+## Description
+
+Une application Flask minimaliste, conteneurisée sous Docker (Alpine), intégrée dans une chaîne CI/CD GitLab, avec analyse linter, SonarCloud, Trivy, Tests unitaire et déploiement automatisé via EazyLabs.
+
+## fonctionnalités clés
+
+- **Linter** : Analyse statiquement le code pour détecter des erreurs, des incohérences et de mauvaises pratiques avant l’exécution.
+- **Docker-build** : Build de l’image Docker et extraction de l’artefact.
+- **Test acceptation** : Récupération de l’artefact et test fonctionnel de l’application Docker.  
+- **Trivy-scan** : Scan de l’image Docker afin de détecter d’éventuelles vulnérabilités de sécurité. 
+- **Test-unit** : Exécution des tests unitaires de l’application.
+- **Sonarcloud-check** : Effectue des analyses sur la qualité, la sécurité et la maintenabilité du code via des règles et des quality gates.
+- **Docker-push** : Envoi de l’image Docker de l’application dans le registre GitLab.
+- **Deploy review** : Lors d’une merge request, déploiement en environnement de review.
+- **Stop review** : Possibilité d’arrêter manuellement l’environnement de review.
+- **Deploy staging** : Déploiement en environnement de test avant le déploiement en production.
+- **Deploy prod** : Déploiement final en environnement de production.
+
+## Technologies Utilisées
+
+- **Linter** : Analyse statiquement le code pour détecter erreurs, incohérences et mauvaises pratiques avant l’exécution.
+
+- **Docker** : Permet de packager une application et ses dépendances dans des conteneurs portables et reproductibles.
+
+- **Trivy** : Scanne les images, dépendances et configurations pour détecter des vulnérabilités de sécurité.
+
+- **Pytest** : Framework Python permettant d’automatiser les tests unitaires et d’intégration.
+
+- **SonarCloud** : Plateforme SaaS qui analyse la qualité, la sécurité et la maintenabilité du code via des règles et des quality gates.
+
+## Challenges et apprentissages
+
+Ce projet m’a permis de concevoir une chaîne CI/CD complète et cohérente, intégrant qualité, tests, sécurité et déploiement automatisé autour d’une application Flask conteneurisée avec Docker.
+
+Les principaux défis ont été l’orchestration des étapes du pipeline GitLab, la gestion des artefacts Docker, l’intégration des tests unitaires avec pytest, l’analyse de sécurité via Trivy, et le contrôle qualité du code avec SonarCloud.
+
+Enfin, le déploiement automatisé sur des environnements review, staging et production m’a permis de comprendre les enjeux des environnements éphémères, de la validation progressive et de la réduction des risques en production.
+
+## Résultats
+
+Ce projet a abouti à la mise en place d’une chaîne CI/CD fonctionnelle et automatisée, couvrant l’ensemble du cycle de vie de l’application, du commit jusqu’au déploiement en production.
+
+Le pipeline GitLab valide systématiquement la qualité du code (linter, SonarCloud), la fiabilité fonctionnelle (tests unitaires avec pytest), et la sécurité des images Docker grâce à Trivy, avant le build et le push de l’image via Docker.
+
+Les déploiements automatisés en environnements review, staging et production assurent une validation progressive, une meilleure traçabilité des changements et une mise en production plus fiable et maîtrisée.
