@@ -15,4 +15,4 @@ jobs:
           docker build -t portfolio-test .
           docker run portfolio-test
           sleep 20
-        curl localhost
+          curl localhost
