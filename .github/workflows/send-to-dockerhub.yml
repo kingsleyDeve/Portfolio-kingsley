@@ -13,5 +13,5 @@ jobs:
       - name: test docker app
         run: |
           docker build -t portfolio-test .
-          docker run portfolio-test
+          docker run -d --name portfolio -p 3000:3000 portfolio-test
           curl localhost:3000
