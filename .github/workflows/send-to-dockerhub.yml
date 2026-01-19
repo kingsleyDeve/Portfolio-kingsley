@@ -1,17 +1,24 @@
-name: Envoi de l'image sur DockerHub
+name: send image to DockerHub
 
 on:
   workflow_dispatch:
 
 jobs:
-  build-et-push:
+  build-et-test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: test docker app
-        run: |
-          docker build -t portfolio-test .
-          docker run -d --name portfolio -p 3000:3000 portfolio-test
-          curl localhost:3000
+      - name: Build image Docker
+        run: docker build -t portfolio-test .
+
+      - name: Run container
+        run: docker run -d --name portfolio -p 3000:3000 portfolio-test
+
+      - name: Wait for app to be ready
+        run: sleep 10
+
+      - name: Test HTTP response
+        run: curl -f http://localhost:3000
