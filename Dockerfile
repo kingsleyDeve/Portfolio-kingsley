@@ -20,19 +20,14 @@ ENV NODE_ENV=production
 # Créer un utilisateur non-root
 RUN addgroup -S appgroup && adduser -S kingsley -G appgroup
 
-# Copier uniquement les artefacts nécessaires
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/next.config.mjs ./next.config.mjs
+# Copier avec les bons droits directement (pas de chown -R)
+COPY --from=builder --chown=kingsley:appgroup /app/.next ./.next
+COPY --from=builder --chown=kingsley:appgroup /app/public ./public
+COPY --from=builder --chown=kingsley:appgroup /app/package.json ./package.json
+COPY --from=builder --chown=kingsley:appgroup /app/node_modules ./node_modules
+COPY --from=builder --chown=kingsley:appgroup /app/next.config.mjs ./next.config.mjs
 
-# Appliquer les bons droits
-RUN chown -R kingsley:appgroup /app
-
-# Utiliser l'utilisateur non-root
 USER kingsley
 
 EXPOSE 3000
-
 CMD ["npm", "start"]
