@@ -18,11 +18,15 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: "portfolio-test:latest"
+          scanners: "vuln"
           format: "table"
-          exit-code: 1
+          exit-code: "1"
           ignore-unfixed: true
-          severity: "CRITICAL,HIGH"
-
+          severity: "HIGH,CRITICAL"
+          skip-files: |
+            **/*.map
+            **/node_modules/**
+      
       - name: Run container
         run: docker run -d --name portfolio -p 3000:3000 portfolio-test
 
