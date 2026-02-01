@@ -25,7 +25,7 @@ jobs:
           severity: "HIGH,CRITICAL"
           skip-files: |
             **/*.map
-            **/node_modules/**
+          
       
       - name: Run container
         run: docker run -d --name portfolio -p 3000:3000 portfolio-test
