@@ -24,8 +24,7 @@ jobs:
           exit-code: "1"
           ignore-unfixed: true
           severity: "HIGH,CRITICAL"
-          skip-files: |
-           ## **/*.map
+          
           
       
       - name: Run container
