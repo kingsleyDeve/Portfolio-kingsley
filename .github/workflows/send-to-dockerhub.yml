@@ -15,16 +15,16 @@ jobs:
         run: docker build -t portfolio-test .
       
       
-      ##  - name: Run Trivy scan
-        ##uses: aquasecurity/trivy-action@master
-        ##with:
-         ## image-ref: "portfolio-test:latest"
-          ##scanners: "vuln"
-          ##format: "table"
-          ##exit-code: "1"
-          ##ignore-unfixed: true
-          ##severity: "HIGH,CRITICAL"
-          ##skip-files: |
+      - name: Run Trivy scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: "portfolio-test:latest"
+          scanners: "vuln"
+          format: "table"
+          exit-code: "1"
+          ignore-unfixed: true
+          severity: "HIGH,CRITICAL"
+          skip-files: |
            ## **/*.map
           
       
