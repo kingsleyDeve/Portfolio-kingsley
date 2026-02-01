@@ -48,7 +48,7 @@ const home: Home = {
   label: "Home",
   title: `Portfolio - ${person.name} `,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Je suis kingsley WILLIAMS, Administrateur Systèmes Linux / Infra Cloud</>,
+  headline: <>Je suis Kingsley WILLIAMS, Administrateur Systèmes Linux / Infra Cloud</>,
   featured: {
     display: true,
     title: (
@@ -98,7 +98,7 @@ const about: About = {
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Experience",
+    title: "Expériences Professionnelles",
     experiences: [
       {
         company: "Adipsys",

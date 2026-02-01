@@ -13,6 +13,15 @@ jobs:
 
       - name: Build image Docker
         run: docker build -t portfolio-test .
+      
+      - name: Run Trivy scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: "portfolio-test:latest"
+          format: "table"
+          exit-code: 1
+          ignore-unfixed: true
+          severity: "CRITICAL,HIGH"
 
       - name: Run container
         run: docker run -d --name portfolio -p 3000:3000 portfolio-test
