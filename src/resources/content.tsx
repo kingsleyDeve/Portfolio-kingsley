@@ -100,6 +100,36 @@ const about: About = {
     display: true, // set to false to hide this section
     title: "Expériences Professionnelles",
     experiences: [
+
+       {
+        company: "Cinemeccanica",
+        timeframe: "01/2026 - en cours",
+        role: "Administrateur Systèmes & Réseaux",
+        achievements: [
+          <>
+           Contexte : Déploiement de l'équipement réseau et support système & réseau dans une équipe de 2
+          personnes
+          </>,
+          <>
+            Administration quotidienne de serveurs Linux Debian/Ubuntu
+          </>,
+          <>
+            Gestion de routeur : creation de de VPN IPsec site to site, création de DMZ
+          </>,
+          <>
+            Gestion de firewall Pfsense
+          </>,
+          <>
+           Rédaction de documentations techniques
+          </>,
+           <>
+            Support informatique pour des cinéma à travers le monde.
+          </>,
+        ],
+        
+      },
+
+
       {
         company: "Adipsys",
         timeframe: "01/2023 - 01/2025",
